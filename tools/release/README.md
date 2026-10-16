@@ -82,8 +82,9 @@ and zlib libraries. It writes both:
 
 - `Cyberbots-linux-x86_64.tar.gz` — the two programs, self-contained;
 - `Cyberbots-linux-x86_64.AppImage` — the same programs in an AppDir, their libraries gathered by
-  [linuxdeploy] and packed by its appimage plugin (`tools/release/cybots.png` is a placeholder icon,
-  replace it with your own). `APPIMAGE_EXTRACT_AND_RUN` is set, so no FUSE is needed.
+  [linuxdeploy] and packed by its appimage plugin (`tools/release/cybots.png`, drawn by
+  `tools/release/make-icon.py` — original artwork, no game art). `APPIMAGE_EXTRACT_AND_RUN` is set, so
+  no FUSE is needed.
 
 To see what an archive asks for:
 
