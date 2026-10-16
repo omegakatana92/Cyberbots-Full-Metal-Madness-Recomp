@@ -1,0 +1,6 @@
+# Shell scripts are run on Linux and macOS (and by sh on Windows): keep their line endings LF
+# whatever the machine checking them out.
+*.sh text eol=lf
+
+# Binary: never touch it.
+*.png binary

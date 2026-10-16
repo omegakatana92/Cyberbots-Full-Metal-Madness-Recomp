@@ -6,7 +6,8 @@ A native PC port of *Cyberbots: Fullmetal Madness* (Capcom, 1995, CPS-2), made w
 part of the port.
 
 Not affiliated with or endorsed by Capcom. No game data is in this repository: the port reads the ROM
-set of a board its player owns.
+set of a board its player owns. Ready-made builds for Windows, Linux and the Steam Deck are on the
+[Releases](../../releases) page.
 
 ## Features
 
