@@ -26,6 +26,7 @@ in [games/cybots/PROGRESS.md](games/cybots/PROGRESS.md)):
 - **No damage** and **No damage, player 2** — a player's health does not go down.
 - **Infinite time** — the round's clock stands still.
 - **One-hit knockouts** — the opponent goes down with the first hit.
+- **Input display** (training aid) — what each player holds, and for how long.
 
 `--list-features` prints the whole list. Training mode, widescreen, custom colours and the other
 "alternative modes" are still to come — see [ROADMAP.md](ROADMAP.md) for what each needs and the order

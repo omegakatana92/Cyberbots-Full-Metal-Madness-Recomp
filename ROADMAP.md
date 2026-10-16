@@ -130,9 +130,10 @@ most worth doing carefully.
 7. **Colour editor.**
 
 **Done so far:** the RAM map has begun — the credits, both players' health, and the round's clock, each
-found and checked (`games/cybots/PROGRESS.md`) — and the first features are in: free play, no damage for
-either player, infinite time, and one-hit knockouts (`games/cybots/src/`). Next: the rest of a player's
-record (positions, facing, whether a move is out) for the training aids, and the gauge for `full_gauge`.
+found and checked (`games/cybots/PROGRESS.md`) — and features are in: free play, no damage for either
+player, infinite time, one-hit knockouts, and the first training aid, the input display
+(`games/cybots/src/`). Next: the rest of a player's record (positions, facing, whether a move is out) for
+the other training aids, and the gauge for `full_gauge`.
 
 ## Before uploading: a checklist
 

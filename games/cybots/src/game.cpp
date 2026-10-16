@@ -5,15 +5,29 @@
 
 namespace cps2recomp {
 
-void RegisterCheats();             // cheats.cpp
+void RegisterCheats();   // cheats.cpp
 void CheatsFrame(Machine &machine);
+void RegisterTraining(); // training.cpp
+void TrainingBeforeFrame(Machine &machine);
+void TrainingFrame(Machine &machine);
+
+namespace {
+    void BeforeFrame(Machine &machine) {
+        TrainingBeforeFrame(machine);
+    }
+
+    // (the cheats see what a frame did, after it; the training aids show what was just read)
+    void Frame(Machine &machine) {
+        CheatsFrame(machine);
+        TrainingFrame(machine);
+    }
+} // namespace
 
 void RegisterGame() {
     RegisterCheats();
-    // (the cheats see what a frame did, after it)
-    TheGame().frame = [](Machine &machine) {
-        CheatsFrame(machine);
-    };
+    RegisterTraining();
+    TheGame().beforeFrame = BeforeFrame;
+    TheGame().frame = Frame;
 }
 
 } // namespace cps2recomp

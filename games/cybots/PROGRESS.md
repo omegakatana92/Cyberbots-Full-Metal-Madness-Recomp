@@ -46,6 +46,7 @@ round from everything else.
 | `no_damage_2` | Cheats | The same for player 2 (the opponent's, in a one-player game). |
 | `infinite_time` | Cheats | Holds the round's clock where it stood when the round began, so it never runs out. |
 | `one_hit` | Cheats | Leaves the opponent (player 2) a single point of health, so any hit ends the round. |
+| `input_display` | Training | What each player holds, and for how long, at their side of the picture. The first training aid: it is the toolkit's `fight::InputHistory` (the notation, the hold counts) fed from the port's own panel bits, so it needed no new address. The game's facing byte is still unknown, so the notation is not yet turned to the player's side. |
 
 Each was checked with no window: `free_play` against the title (`CREDIT(S)=2`), the no-damage cheats
 against the attract demo fight (the bar stays full, and the health word stays at the ceiling).
