@@ -66,6 +66,23 @@ and zlib libraries. It writes both:
 On a Steam Deck the `.tar.gz` unpacks and runs as-is; the `.AppImage` can be added to Steam as a
 non-Steam game. Both open the launcher, which asks for your ROM set the first time.
 
+### On Windows, in WSL
+
+The Linux build runs in WSL 2, so a Linux machine is not needed. If `wsl --install` is refused (it
+wants an administrator), a distribution can be imported without one:
+
+```sh
+curl -fsSL -o ubuntu-base.tar.gz \
+  https://cdimage.ubuntu.com/ubuntu-base/releases/24.04/release/ubuntu-base-24.04.5-base-amd64.tar.gz
+wsl --import cyberbots-wsl "%USERPROFILE%\wsl\cyberbots-wsl" ubuntu-base.tar.gz --version 2
+wsl -d cyberbots-wsl -u root -- bash -c "apt-get update && apt-get install -y <the packages above>"
+```
+
+Keep the distribution's folder outside temporary directories, or a disk cleanup may take it with it.
+Build inside the distribution's own filesystem (a build under `/mnt/c` is slow): copy the repository
+in — `rom/`, `work/` and all — and run `tools/release/linux.sh` there. WSL is what this project's
+own Linux and AppImage builds were made in.
+
 ## Uploading
 
 ```sh
